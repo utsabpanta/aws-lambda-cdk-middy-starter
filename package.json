@@ -1,0 +1,44 @@
+{
+  "name": "aws-lambda-cdk-middy-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "start": "tsx src/local-runner.ts",
+    "synth": "cdk synth --verbose",
+    "deploy": "npm run build && npm run synth && cdk deploy",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@middy/core": "^3.6.0",
+    "@middy/http-cors": "^3.6.0",
+    "@middy/http-error-handler": "^3.6.0",
+    "@middy/http-json-body-parser": "^3.6.0",
+    "@middy/validator": "^3.6.0",
+    "aws-cdk-lib": "^2.155.0",
+    "constructs": "^10.0.0",
+    "http-errors": "^2.0.0",
+    "type-fest": "^3.10.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.115",
+    "@types/node": "^20.1.0",
+    "aws-cdk": "^2.80.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [],
+  "author": "Utsab Pant",
+  "license": "ISC",
+  "description": "A starter template for AWS Lambda functions using Middy middleware, AWS CDK for infrastructure, and Zod for validation, featuring a Task Management API example and local development setup."
+}

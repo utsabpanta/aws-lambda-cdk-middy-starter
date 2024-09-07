@@ -1,0 +1,3 @@
+{
+    "app": "tsx src/lib/task-management-stack.ts"
+}
